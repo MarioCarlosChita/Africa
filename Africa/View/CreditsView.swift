@@ -9,10 +9,24 @@ import SwiftUI
 
 struct CreditsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("compass")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 128, height: 128)
+
+            Text("""
+             Copyright @ Eliezer Antonio
+            All right reserved
+            Better Apps Less Code
+            """).font(.footnote)
+                .multilineTextAlignment(.center)
+        } //: VSTACK
+        .padding()
+        .opacity(0.4)
     }
 }
 
 #Preview {
-    CreditsView()
+    CreditsView().padding()
 }
